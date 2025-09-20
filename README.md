@@ -1,19 +1,19 @@
 # Library Management System
 ##Setup instructions:
-1- Clone repository :
+1.Clone repository :
 Open cmd 
 write git clone https://github.com/Huda0Khalil/Library-Management-System.git
 **Back-end
-2- Open Microsoft Visual Stadio
+2. Open Microsoft Visual Stadio
 file -> open project/solution -> choose Library-Management-System
-3- Update appsettings.json with your SQL Server connection string.
-4- view -> other windows -> package manager console -> write: Update-Database -Project "Library Management System.Infrastructure" -StartupProject "Library Management System.API"
-5- Execute the provided stored procedure script (DatabaseScripts/stored_procedures.sql) in SQL Server.
-6- run API
+3. Update appsettings.json with your SQL Server connection string.
+4. view -> other windows -> package manager console -> write: Update-Database -Project "Library Management System.Infrastructure" -StartupProject "Library Management System.API"
+5. Execute the provided stored procedure script (DatabaseScripts/stored_procedures.sql) in SQL Server.
+6. run API
 **Front-End
-1- Open Visual Stadio Code -> Open folde -> choose LibraryManagementSystem.FrontEnd
-2- open LibraryManagementSystem.FrontEnd\src\environments\environment.ts -> change apiUrl value to Url appear when run back-end -> save.
-2- Terminal -> New Terminal -> write: npm install -> ng s 
+- Open Visual Stadio Code -> Open folde -> choose LibraryManagementSystem.FrontEnd
+- open LibraryManagementSystem.FrontEnd\src\environments\environment.ts -> change apiUrl value to Url appear when run back-end -> save.
+- Terminal -> New Terminal -> write: npm install -> ng s 
 
 ##Time Estimation vs Actual:
 Estimated time: 1 week .

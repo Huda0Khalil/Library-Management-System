@@ -1,16 +1,16 @@
 # Library Management System
 ## Setup instructions:<br>
-> *Clone repository :
+* Clone repository :
 Open cmd 
 write git clone https://github.com/Huda0Khalil/Library-Management-System.git
 <br>
 ## Back-end<br>
-> * Open Microsoft Visual Stadio 
+* Open Microsoft Visual Stadio 
 file -> open project/solution -> choose Library-Management-System
-> * Update appsettings.json with your SQL Server connection string.
-> * view -> other windows -> package manager console -> write: Update-Database -Project "Library Management System.Infrastructure" -StartupProject "Library Management System.API"
-> * Execute the provided stored procedure script (DatabaseScripts/stored_procedures.sql) in SQL Server.
-> * run API
+* Update appsettings.json with your SQL Server connection string.
+* view -> other windows -> package manager console -> write: Update-Database -Project "Library Management System.Infrastructure" -StartupProject "Library Management System.API"
+* Execute the provided stored procedure script (DatabaseScripts/stored_procedures.sql) in SQL Server.
+* run API
 <br>
 ## Front-End<br>
 - Open Visual Stadio Code -> Open folde -> choose LibraryManagementSystem.FrontEnd

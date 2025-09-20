@@ -1,0 +1,29 @@
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+.header {
+    margin: 20px;
+    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+button{
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    background-color: #d7e3ff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+mat-icon{
+    color: #00458f;
+}
+.example-button-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}

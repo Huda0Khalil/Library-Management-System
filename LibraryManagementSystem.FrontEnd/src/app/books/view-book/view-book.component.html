@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Book Details</h2>
+  <hr>
+  <div class="book-details">
+    <p>Book Id: {{ book.id }}</p>
+    <p>Book Availability: {{ book.isAvailable }}</p>
+    <p>Book Title: {{ book.title }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+    <p>Book Author: {{ book.author }}</p>
+    <p>Book Published Year: {{ book.publishedYear }}</p>
+
+    <div class="description">
+      <strong>Book Description:</strong>
+      <p>{{ book.description }}</p>
+    </div>
+
+    <div class="categories">
+      <strong>Book Categories:</strong>
+      <ul>
+        <li *ngFor="let category of book.categories">{{ category.name }}</li>
+      </ul>
+    </div>
+
+    <p>Book Language: {{ book.language }}</p>
+    <p>Book Publisher: {{ book.publisher }}</p>
+  </div>
+</div>

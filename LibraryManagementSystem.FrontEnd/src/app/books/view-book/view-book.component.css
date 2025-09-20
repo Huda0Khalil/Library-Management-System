@@ -1,0 +1,23 @@
+.container{
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    width: 90%;  
+}
+.book-details{
+   display: flex;
+    flex-wrap: wrap;       
+    gap: 20px;             
+    justify-content: space-between;
+}
+p{
+    width: calc(50% - 20px);
+}
+.description{
+    width: 100%;
+}
+.categories{
+    width: 100%;
+}

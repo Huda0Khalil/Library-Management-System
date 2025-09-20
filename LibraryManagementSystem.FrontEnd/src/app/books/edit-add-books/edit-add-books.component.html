@@ -1,0 +1,92 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="book-form">
+  <!-- Title -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" />
+    <mat-error *ngIf="bookForm.get('title')?.hasError('required')">
+      Title is required.
+    </mat-error>
+    <mat-error *ngIf="bookForm.get('title')?.hasError('maxlength')">
+      Title cannot exceed 150 characters.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Author -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Author</mat-label>
+    <input matInput formControlName="author" />
+    <mat-error *ngIf="bookForm.get('author')?.hasError('required')">
+      Author is required.
+    </mat-error>
+    <mat-error *ngIf="bookForm.get('author')?.hasError('maxlength')">
+      Author cannot exceed 100 characters.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Is Available -->
+<mat-checkbox formControlName="isAvailable"  >Available</mat-checkbox>
+  <!-- ISBN -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>ISBN</mat-label>
+    <input matInput formControlName="isbn" />
+    <mat-error *ngIf="bookForm.get('isbn')?.hasError('required')">
+      ISBN is required.
+    </mat-error>
+    <mat-error *ngIf="bookForm.get('isbn')?.hasError('pattern')">
+      ISBN must be in format 000-0000000000.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Published Year -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Published Year</mat-label>
+    <input type="number" matInput formControlName="publishedYear" />
+    <mat-error *ngIf="bookForm.get('publishedYear')?.hasError('min') || bookForm.get('publishedYear')?.hasError('max')">
+      Year must be between 1450 and 2100.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Description -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput rows="3" formControlName="description"></textarea>
+    <mat-error *ngIf="bookForm.get('description')?.hasError('maxlength')">
+      Description cannot exceed 500 characters.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Publisher -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Publisher</mat-label>
+    <input matInput formControlName="publisher" />
+    <mat-error *ngIf="bookForm.get('publisher')?.hasError('maxlength')">
+      Publisher cannot exceed 100 characters.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Language -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Language</mat-label>
+    <input matInput formControlName="language" />
+    <mat-error *ngIf="bookForm.get('language')?.hasError('maxlength')">
+      Language cannot exceed 50 characters.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Categories (optional) -->
+  
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Categories</mat-label>
+    <mat-select formControlName="categoryIds" multiple>
+      <mat-option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="bookForm.get('categoryIds')?.hasError('required')">
+      At least one category is required.
+    </mat-error>
+  </mat-form-field>
+ 
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="bookForm.invalid">
+    {{ isEditMode ? 'Update Book' : 'Add Book' }}
+  </button>
+</form>
